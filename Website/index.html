@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockz - The Simulation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typeit/dist/typeit.min.js"></script>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+    
+    <section id="navbar">
+        <nav class=" fixed-top bg-nav navbar-transparent">
+            <div class="container-fluid pt-1">
+                <div class="d-none d-md-block">
+                    <div class="row"> 
+                        <div class="col-md text-center">
+                        </div>
+                        <div class="col-md text-center pt-2" style="margin-left: 130px; padding-bottom: 10px;padding-left: 900px;">
+                            <button class="btn btn-success-1" data-bs-toggle="modal" data-bs-target="#Modal" data-bs-whatever="@mod"><i class="fa-solid fa-phone"></i> Schedule a call back</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-md-none">
+                    <div class="row">
+                        <div class="col-md d-flex justify-content-between align-items-center">
+                            <a href="#" style="order: 1;">
+                                <img src="Images/logo.svg" class="img-fluid" width="180p" style="order: 1;">
+                            </a>
+                            <button class="text-end btn bg-light btn-outline-dark" data-bs-toggle="modal" data-bs-target="#Modal" data-bs-whatever="@mod" style="order: 2;"><i class="fa-solid fa-phone"></i></button>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+        </nav>
+    </section>
+
+    <div class="modal fade" id="Modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel" style="color:#008b00">Schedule a call back</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <input type="text" class="form-control" placeholder=" Name" >
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder=" Mobile No.">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder=" Official E-mail">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder=" Company Website">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-success">Schedule a call back</button>
+              </div> 
+          </div>
+        </div>
+    </div>
+
+    <section id="mobile-bottom-nav">
+        <div class="d-md-none">
+            <nav class="navbar fixed-bottom bg-nav-2">
+                <div class="container-fluid">   
+                    <div class="col-md-4 mx-auto text-light text-center">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#Modal" data-bs-whatever="@mod" style="font-size:16px;color:white;text-decoration:none">Schedule a call back</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <section id="header">
+        <div class="container-fluid" style="padding:0px;overflow:hidden;background-image: url('Images/payout-bgposter.jpg'); background-position: center; background-attachment: scroll; background-attachment: scroll;background-repeat: no-repeat; background-size: cover;">
+            <div class="row text-light pt-5">
+                <div class="col-md-10 mx-auto pt-3">
+                    <div class="row text-center">
+                        <div class="col-md pt-4 content-3">
+                            <h2 class="fw-normal">UPI Transaction Simulation</h2>
+                        </div>
+                    </div>
+                    
+                    <div class="row text-center">
+                        <div class="col-md pt-2 content-2">
+                            <h4 class="fw-normal">Experience a realistic online payment system with secure money transfers, OTP verification, and transaction tracking.</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="row text-center">
+                        <div class="col-md pt-3 content-1">
+                            <h3 class="fw-normal">
+                                <span class="dot-circle me-2"></span> Secure OTP-based Transactions  
+                                <span class="dot-circle mx-2"></span> Real-Time Fund Transfers  
+                                <span class="dot-circle ms-2"></span> Detailed Transaction Ledger  
+                            </h3>
+                        </div>                        
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-md pt-3 pb-5">
+                            <div class="typed_wrap">
+                                <h4 style="font-weight: 400;" class="text-center">Through this product, we can <u><span class="typed"></span></u></h4>
+                            </div>                                                   
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pb-5">
+                <div class="d-none d-md-block">
+                    <div class="col-md-11 mx-auto pb-5">
+                        <div class="input-group">
+                            <input type="text" class="form-control custom-height" placeholder=" Name">
+                            <input type="text" class="form-control custom-height" placeholder=" Mobile No.">
+                            <input type="text" class="form-control custom-height" placeholder=" Official E-mail">
+                            <input type="text" class="form-control custom-height" placeholder=" Company Website">
+                            <button class="btn btn-success text-light custom-height" type="button">SCHEDULE A CALL</button>
+                        </div>                    
+                    </div>
+                </div>
+                <div class="d-md-none">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-7 pl-md-4">
+                                <div class="input-group d-grid">
+                                    <div class="mb-2">
+                                        <input type="text" class="form-control custom-height" placeholder=" Name">
+                                    </div>
+                                    <div class="mb-2">
+                                        <input type="text" class="form-control custom-height" placeholder=" Mobile No.">
+                                    </div>
+                                    <div class="mb-2">
+                                        <input type="text" class="form-control custom-height" placeholder=" Official E-mail">
+                                    </div>
+                                    <div class="mb-2">
+                                        <input type="text" class="form-control custom-height" placeholder=" Company Website">
+                                    </div>
+                                </div>
+                                <div class="d-grid">
+                                    <button class="btn btn-success text-light custom-height" type="button">SCHEDULE A CALL</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pb-3 pt-3"></div>
+        </div>
+    </section>
+    
+    <section id="features">
+        <div class="container-fluid bg-col-1 pt-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md text-center">
+                        <h2 class="fw-normal">Key Features</h2>
+                        <hr class="hr-k">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 mx-auto">
+                        <div class="row pt-4 text-center">
+                            <div class="col-md shadow-item-1">
+                                <div class="icon-box">
+                                    <h4 class="loggo pt-4 pb-5"><i class="fa-solid fa-lock fa-2xl"></i></h4>
+                                </div>
+                                <p class="feature-title">Secure OTP Verification</p>
+                                <p class="feature-desc">All transactions require OTP validation, ensuring maximum security.</p>
+                            </div>
+                            <div class="col-md shadow-item-1">
+                                <div class="icon-box">
+                                    <h4 class="loggo pt-4 pb-5"><i class="fa-solid fa-bolt fa-2xl"></i></h4>
+                                </div>
+                                <p class="feature-title">Instant Fund Transfer</p>
+                                <p class="feature-desc">Send money in real-time with immediate processing and confirmation.</p>
+                            </div>
+                            <div class="col-md shadow-item-1">
+                                <div class="icon-box">
+                                    <h4 class="loggo pt-4 pb-5"><i class="fa-solid fa-clipboard-list fa-2xl"></i></h4>
+                                </div>
+                                <p class="feature-title">Transaction Ledger</p>
+                                <p class="feature-desc">View your complete transaction history and validate ledger authenticity.</p>
+                            </div>
+                            <div class="col-md shadow-item-1">
+                                <div class="icon-box">
+                                    <h4 class="loggo pt-4 pb-5"><i class="fa-solid fa-shield-halved fa-2xl"></i></h4>
+                                </div>
+                                <p class="feature-title">Multi-Layer Security</p>
+                                <p class="feature-desc">Advanced fraud detection, secure authentication, and encryption measures.</p>
+                            </div>
+                        </div> 
+                    </div>
+    
+                    <div class="col-md-10 mx-auto">
+                        <div class="row pt-4 text-center">
+                            <div class="col-md shadow-item-1">
+                                <div class="icon-box">
+                                    <h4 class="loggo pt-4 pb-5"><i class="fa-solid fa-qrcode fa-2xl"></i></h4>
+                                </div>
+                                <p class="feature-title">UPI QR Payments</p>
+                                <p class="feature-desc">Scan & pay via QR codes for quick and seamless transactions.</p>
+                            </div>
+                            <div class="col-md shadow-item-1">
+                                <div class="icon-box">
+                                    <h4 class="loggo pt-4 pb-5"><i class="fa-solid fa-toggle-on fa-2xl"></i></h4>
+                                </div>
+                                <p class="feature-title">Light & Dark Mode</p>
+                                <p class="feature-desc">Switch between light and dark themes for better user experience.</p>
+                            </div>
+                            <div class="col-md shadow-item-1">
+                                <div class="icon-box">
+                                    <h4 class="loggo pt-4 pb-5"><i class="fa-solid fa-bell fa-2xl"></i></h4>
+                                </div>
+                                <p class="feature-title">Real-Time Notifications</p>
+                                <p class="feature-desc">Get instant alerts for successful, pending, and failed transactions.</p>
+                            </div>
+                            <div class="col-md shadow-item-1">
+                                <div class="icon-box">
+                                    <h4 class="loggo pt-4 pb-5"><i class="fa-solid fa-users fa-2xl"></i></h4>
+                                </div>
+                                <p class="feature-title">User-Friendly Interface</p>
+                                <p class="feature-desc">Simple, intuitive design for easy navigation and hassle-free payments.</p>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="works">
+        <div class="container-fluid pb-5">
+            <div class="row pt-4">
+                <div class="col-md-8 mx-auto">
+                    <div class="row text-center">
+                        <h3 style="font-weight: 350;">How it Works</h3>
+                        <h6 style="font-weight: 200;">It is simple as 1, 2, 3</h6>
+                        <hr class="hr-k">
+                    </div>
+                    <div class="row text-center pt-5">
+                        <div class="col-md shadow-itemm">
+                            <h5 class="counter">1</h5>
+                            <p>Load funds to the Payout account.</p>
+                        </div>
+                        <div class="col-md-1 pt-5 d-none d-md-block">
+                            <i class="fa-solid fa-circle-arrow-right fa-2xl" style="color: #008b25;"></i>                        
+                        </div>
+                        <div class="col-md shadow-itemm">
+                            <h5 class="counter">2</h5>
+                            <p>Do payouts using <span style="color:#008b25">the APIs</span></p>
+                        </div>
+                        <div class="col-md-1 pt-5 d-none d-md-block">
+                            <i class="fa-solid fa-circle-arrow-right fa-2xl" style="color: #008b25;"></i>                        
+                        </div>
+                        <div class="col-md shadow-itemm">
+                            <h5 class="counter">3</h5>
+                            <p>Get the payment status on the API / Dashboard</p>
+                        </div>
+                    </div>
+                    <div class="row text-center pt-3">
+                        <h6 style="font-weight: 200;">It is very simple as told.</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="API">
+        <div class="container-fluid bg-col-1 pt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 mx-auto">
+                        <div class="row text-center">
+                            <div class="col-md">
+                                <h3 style="font-weight: 350;">UPI Transaction APIs</h3>
+                                <h6 style="font-weight: 350;">Simple APIs to simulate UPI transactions</h6>
+                                <hr class="hr-k">
+                            </div>
+                        </div>
+                        
+                        <!-- User Registration -->
+                        <div class="row text-start pt-4 pb-4">
+                            <div class="col-md">
+                                <h3 style="font-weight: 350;">User Registration API</h3>
+                                <h6 style="font-weight: 350;">Register a new user in the system.</h6>
+                            </div>
+                        </div>
+                        <div class="row bg-code text-start text-light">
+                            <div class="col-md-10 mx-auto">
+                                <p></p>
+                                <p>{</p>
+                                <p><span style="color:#dc3545">"username"</span> : <span style="color: #99c2f0;">"someuser"</span>,</p>
+                                <p><span style="color:#dc3545">"password"</span> : <span style="color: #99c2f0;">"somesecurepassword"</span>,</p>
+                                <p><span style="color:#dc3545">"phone"</span> : <span style="color: #99c2f0;">"9876543210"</span></p>
+                                <p>}</p>
+                                <p></p>
+                            </div>
+                        </div>
+    
+                        <!-- User Login -->
+                        <div class="row text-start pt-4 pb-4">
+                            <div class="col-md">
+                                <h3 style="font-weight: 350;">User Login API</h3>
+                                <h6 style="font-weight: 350;">Authenticate an existing user.</h6>
+                            </div>
+                        </div>
+                        <div class="row bg-code text-start text-light">
+                            <div class="col-md-10 mx-auto">
+                                <p></p>
+                                <p>{</p>
+                                <p><span style="color:#dc3545">"username"</span> : <span style="color: #99c2f0;">"someuser"</span>,</p>
+                                <p><span style="color:#dc3545">"password"</span> : <span style="color: #99c2f0;">"somesecurepassword"</span></p>
+                                <p>}</p>
+                                <p></p>
+                            </div>
+                        </div>
+    
+                        <!-- Send Money -->
+                        <div class="row text-start pt-4 pb-4">
+                            <div class="col-md">
+                                <h3 style="font-weight: 350;">Send Money API</h3>
+                                <h6 style="font-weight: 350;">Transfer money between users.</h6>
+                            </div>
+                        </div>
+                        <div class="row bg-code text-start text-light">
+                            <div class="col-md-10 mx-auto">
+                                <p></p>
+                                <p>{</p>
+                                <p><span style="color:#dc3545">"sender"</span> : <span style="color: #99c2f0;">"someuser"</span>,</p>
+                                <p><span style="color:#dc3545">"receiver"</span> : <span style="color: #99c2f0;">"anotheruser"</span>,</p>
+                                <p><span style="color:#dc3545">"amount"</span> : <span style="color: #28a745;">500.0</span>,</p>
+                                <p><span style="color:#dc3545">"otp"</span> : <span style="color: #99c2f0;">"123456"</span></p>
+                                <p>}</p>
+                                <p></p>
+                            </div>
+                        </div>
+    
+                        <!-- Check Balance -->
+                        <div class="row text-start pt-4 pb-4">
+                            <div class="col-md">
+                                <h3 style="font-weight: 350;">Check Balance API</h3>
+                                <h6 style="font-weight: 350;">Retrieve the user's account balance.</h6>
+                            </div>
+                        </div>
+                        <div class="row bg-code text-start text-light">
+                            <div class="col-md-10 mx-auto">
+                                <p></p>
+                                <p>{</p>
+                                <p><span style="color:#dc3545">"username"</span> : <span style="color: #99c2f0;">"someuser"</span></p>
+                                <p>}</p>
+                                <p></p>
+                            </div>
+                        </div>
+    
+                        <!-- Transaction History -->
+                        <div class="row text-start pt-4 pb-4">
+                            <div class="col-md">
+                                <h3 style="font-weight: 350;">Transaction History API</h3>
+                                <h6 style="font-weight: 350;">View past transactions.</h6>
+                            </div>
+                        </div>
+                        <div class="row bg-code text-start text-light">
+                            <div class="col-md-10 mx-auto">
+                                <p></p>
+                                <p>{</p>
+                                <p><span style="color:#dc3545">"username"</span> : <span style="color: #99c2f0;">"someuser"</span></p>
+                                <p>}</p>
+                                <p></p>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="faq">
+        <div class="container-fluid bg-col-1" style="padding:0px;overflow:hidden;background-image: url('Images/faq-dotted.png'); background-position: fixed; background-attachment: scroll; background-repeat: no-repeat; background-size: cover;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9 mx-auto">
+                        <div class="row pt-5 pb-3 text-center">
+                            <h4 style="font-weight: 350;">Frequently Asked Questions</h4>
+                            <hr class="hr-k">
+                        </div>
+                        <div class="row pb-5">
+                            <div class="accordion" id="faqAccordion">
+    
+                                <!-- What is this project about? -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="false" aria-controls="faqOne">
+                                            What is this project about?
+                                        </button>
+                                    </h2>
+                                    <div id="faqOne" class="accordion-collapse collapse" aria-labelledby="faqOne" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            This is a UPI Transaction Simulation project that mimics real-life online money transfers, allowing users to register, log in, send money, check balances, and view transaction history.
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!-- How do I create an account? -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">
+                                            How do I create an account?
+                                        </button>
+                                    </h2>
+                                    <div id="faqTwo" class="accordion-collapse collapse" aria-labelledby="faqTwo" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            You can create an account by clicking the "Register" button and providing a username, password, and phone number. After registration, you'll receive an OTP for verification.
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!-- How do I log in? -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">
+                                            How do I log in?
+                                        </button>
+                                    </h2>
+                                    <div id="faqThree" class="accordion-collapse collapse" aria-labelledby="faqThree" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            Click the "Login" button and enter your registered username and password. You'll receive an OTP, which must be entered for authentication.
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!-- Can I send money to any user? -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFour" aria-expanded="false" aria-controls="faqFour">
+                                            Can I send money to any user?
+                                        </button>
+                                    </h2>
+                                    <div id="faqFour" class="accordion-collapse collapse" aria-labelledby="faqFour" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            Yes, as long as the recipient is registered on the platform. Enter their username, specify the amount, and confirm the transaction with an OTP.
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!-- How do I check my transaction history? -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFive" aria-expanded="false" aria-controls="faqFive">
+                                            How do I check my transaction history?
+                                        </button>
+                                    </h2>
+                                    <div id="faqFive" class="accordion-collapse collapse" aria-labelledby="faqFive" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            Go to the "Transaction History" page to view all sent and received transactions, including timestamps and statuses.
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!-- Is this real money? -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqSix" aria-expanded="false" aria-controls="faqSix">
+                                            Is this real money?
+                                        </button>
+                                    </h2>
+                                    <div id="faqSix" class="accordion-collapse collapse" aria-labelledby="faqSix" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            No, this is a simulation project designed for learning and demonstration purposes. No real money transactions occur.
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!-- Can I use this system for real transactions? -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqSeven" aria-expanded="false" aria-controls="faqSeven">
+                                            Can I use this system for real transactions?
+                                        </button>
+                                    </h2>
+                                    <div id="faqSeven" class="accordion-collapse collapse" aria-labelledby="faqSeven" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            No, this project is a simulation meant for educational and demonstration purposes only.
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!-- What technologies were used to build this? -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqEight" aria-expanded="false" aria-controls="faqEight">
+                                            What technologies were used to build this?
+                                        </button>
+                                    </h2>
+                                    <div id="faqEight" class="accordion-collapse collapse" aria-labelledby="faqEight" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            This project is built using Flask for the backend, React.js for the frontend, and SQLite for storing transaction data.
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!-- Who developed this project? -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqNine" aria-expanded="false" aria-controls="faqNine">
+                                            Who developed this project?
+                                        </button>
+                                    </h2>
+                                    <div id="faqNine" class="accordion-collapse collapse" aria-labelledby="faqNine" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            This project was developed solely by Kaushik D as a portfolio and learning project.
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!-- Can I contribute to this project? -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTen" aria-expanded="false" aria-controls="faqTen">
+                                            Can I contribute to this project?
+                                        </button>
+                                    </h2>
+                                    <div id="faqTen" class="accordion-collapse collapse" aria-labelledby="faqTen" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            Currently, this project is a personal simulation, but contributions and feedback are always welcome.
+                                        </div>
+                                    </div>
+                                </div>
+    
+                            </div> <!-- End Accordion -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer2 pt-4">
+        <div class="container">
+            <div class="d-none d-md-block">
+                <div class="row">
+                    <div class="col-md" style="padding-left: 125px;">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h5>Project</h5>
+                                <h6 style="font-weight: lighter;">Home</h6>
+                                <h6 style="font-weight: lighter;">About</h6>
+                                <h6 style="font-weight: lighter;">Features</h6>
+                            </div>
+                            <div class="col-md-3">
+                                <h5>APIs</h5>
+                                <h6 style="font-weight: lighter;">User Authentication</h6>
+                                <h6 style="font-weight: lighter;">Money Transfer</h6>
+                                <h6 style="font-weight: lighter;">Transaction History</h6>
+                                <h6 style="font-weight: lighter;">Balance Inquiry</h6>
+                            </div>
+                            <div class="col-md-3">
+                                <h5>Technology</h5>
+                                <h6 style="font-weight: lighter;">Flask (Backend)</h6>
+                                <h6 style="font-weight: lighter;">React (Frontend)</h6>
+                                <h6 style="font-weight: lighter;">SQLite (Database)</h6>
+                            </div>
+                            <div class="col-md-1">
+                                <h5>Legal</h5>
+                                <h6 style="font-weight: lighter;">Terms</h6>
+                                <h6 style="font-weight: lighter;">Privacy</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile View -->
+            <div class="d-md-none">
+                <div class="row" style="padding:20px">
+                    <div class="col-6">
+                        <h5>Project</h5>
+                        <h6 style="font-weight: lighter;font-size:12px">Home</h6>
+                        <h6 style="font-weight: lighter;font-size:12px">About</h6>
+                        <h6 style="font-weight: lighter;font-size:12px">Features</h6>
+                    </div>
+                    <div class="col-6">
+                        <h5>APIs</h5>
+                        <h6 style="font-weight: lighter;font-size:12px">User Authentication</h6>
+                        <h6 style="font-weight: lighter;font-size:12px">Money Transfer</h6>
+                        <h6 style="font-weight: lighter;font-size:12px">Transaction History</h6>
+                        <h6 style="font-weight: lighter;font-size:12px">Balance Inquiry</h6>
+                    </div>
+                </div>
+                <div class="row pt-4" style="padding:20px">
+                    <div class="col-6">
+                        <h5>Technology</h5>
+                        <h6 style="font-weight: lighter;font-size:12px">Flask (Backend)</h6>
+                        <h6 style="font-weight: lighter;font-size:12px">React (Frontend)</h6>
+                        <h6 style="font-weight: lighter;font-size:12px">SQLite (Database)</h6>
+                    </div>
+                    <div class="col-6">
+                        <h5>Legal</h5>
+                        <h6 style="font-weight: lighter;font-size:12px">Terms</h6>
+                        <h6 style="font-weight: lighter;font-size:12px">Privacy</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Copyright -->
+            <div class="row text-center pt-3 pb-0" style="padding:15px">
+                <p style="font-size: small;">Copyright © 2024 
+                    <a href="#" class="text-white" style="text-decoration: none;">Kaushik D</a>. 
+                    All Rights Reserved.
+                </p>            
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
