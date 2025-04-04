@@ -1,4 +1,4 @@
-# Blockz - UPI Transaction Simulation
+# Blockz LedgerPay : A Ledger-Based Transaction System
 
 ## Introduction
 **Blockz** is a simulated **UPI (Unified Payments Interface) transaction system** that allows users to register, log in, send money, and check transaction history. It incorporates **secure authentication, real-time balance management, and transaction tracking** to mimic real-world online banking experiences.
